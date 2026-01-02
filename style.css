@@ -1,0 +1,365 @@
+:root {
+    --bg-img:     darkred;
+    --glass: rgba(20, 20, 20, 0.6);
+    --text: #ffffff;
+    --accent: #007AFF;
+}
+
+.light-mode {
+    --glass: rgba(255, 255, 255, 0.7);
+    --text: #1d1d1f;
+}
+
+/* Personal Info Widget Styling */
+.personal-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.info-tag {
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-tag strong {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--accent);
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.info-tag span {
+    opacity: 0.9;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+/* Light mode adjustments for the info box */
+.light-mode .personal-info-grid {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Mobile fix */
+@media (max-width: 600px) {
+    .personal-info-grid {
+        grid-template-columns: 1fr;
+    }
+    .full-width {
+        grid-column: span 1;
+    }
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: var(--bg-img) no-repeat center center fixed; background-size: cover; color: var(--text); overflow-x: hidden; }
+
+/* Layout Grid */
+.desktop { padding: 60px 20px 100px; display: flex; flex-direction: column; align-items: center; gap: 30px; }
+.window-row { display: flex; gap: 20px; width: 100%; max-width: 850px; }
+.half { flex: 1; }
+
+/* macOS Window Style */
+.window { width: 100%; max-width: 850px; background: var(--glass); backdrop-filter: blur(25px); border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.3); overflow: hidden; transition: background 0.3s; }
+.window-header { height: 35px; background: rgba(0,0,0,0.1); display: flex; align-items: center; padding: 0 15px; }
+.dots { display: flex; gap: 8px; }
+.dots span { width: 12px; height: 12px; border-radius: 50%; }
+.r { background: #ff5f56; } .y { background: #ffbd2e; } .g { background: #27c93f; }
+.window-title { margin: 0 auto; font-size: 11px; font-weight: 600; opacity: 0.7; }
+.window-content { padding: 25px; }
+
+/* Hero & About */
+.hero-flex { display: flex; align-items: center; gap: 25px; }
+.profile-img { width: 120px; height: 120px; border-radius: 20%; object-fit: cover; }
+.music-widget { display: flex; align-items: center; gap: 12px; background: rgba(0,0,0,0.2); padding: 10px; border-radius: 12px; margin-top: 15px; }
+.album-art { font-size: 20px; background: var(--accent); padding: 8px; border-radius: 8px; }
+.music-info span { display: block; font-size: 12px; }
+.divider { border: none; border-top: 1px solid rgba(125,125,125,0.2); margin: 20px 0; }
+.about-me-text h3 { font-size: 14px; margin-bottom: 8px; color: var(--accent); }
+.about-me-text p { font-size: 14px; line-height: 1.6; opacity: 0.9; }
+
+/* Contact Grid Cards */
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; }
+.contact-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 15px; display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; transition: 0.2s; }
+.contact-card:hover { background: rgba(255,255,255,0.1); transform: scale(1.02); border-color: var(--accent); }
+.card-icon { font-size: 20px; }
+.card-info label { display: block; font-size: 10px; opacity: 0.6; text-transform: uppercase; }
+.card-info span { font-size: 12px; font-weight: 600; }
+
+/* Skills & Hobbies */
+.hobby-list { list-style: none; font-size: 14px; }
+.hobby-list li { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+.skill-item { margin-bottom: 12px; }
+.skill-info { display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 5px; }
+.progress-bar { width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 10px; }
+.fill { height: 100%; background: var(--accent); border-radius: 10px; }
+
+/* Forms & Dock Styles are the same as your previous working version... */
+.macos-form .form-row { display: flex; border-bottom: 1px solid rgba(125,125,125,0.2); padding: 8px 0; align-items: center; }
+.form-row label { width: 60px; font-size: 13px; opacity: 0.7; }
+.form-row input, .form-area textarea { background: transparent; border: none; color: inherit; width: 100%; outline: none; font-size: 13px; }
+.form-area textarea { padding: 10px; background: rgba(125,125,125,0.1); border-radius: 8px; margin-top: 10px; resize: none; }
+.send-btn { background: var(--accent); color: white; border: none; padding: 8px 20px; border-radius: 8px; cursor: pointer; float: right; margin-top: 10px; font-weight: 600; }
+.menu-bar { position: fixed; top: 0; width: 100%; height: 28px; background: rgba(0,0,0,0.2); backdrop-filter: blur(20px); display: flex; justify-content: space-between; align-items: center; padding: 0 20px; font-size: 12px; z-index: 1000; }
+.dock { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: rgba(255,255,255,0.2); backdrop-filter: blur(20px); padding: 8px; border-radius: 18px; display: flex; gap: 15px; border: 1px solid rgba(255,255,255,0.2); }
+.dock-item { font-size: 24px; text-decoration: none; transition: 0.2s; }
+.dock-item:hover { transform: translateY(-8px) scale(1.2); }
+
+@media (max-width: 600px) {
+    .window-row, .hero-flex { flex-direction: column; }
+    .hero-flex { text-align: center; }
+    .contact-grid { grid-template-columns: 1fr; }
+}
+
+/* Pinterest Grid */
+.pinterest-grid {
+    column-count: 2;
+    column-gap: 15px;
+}
+.pin {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 15px;
+    cursor: zoom-in;
+}
+.pin img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.pin:hover img { transform: scale(1.02); }
+
+/* Achievement Cards */
+.achievement-flex {
+    display: flex;
+    gap: 15px;
+}
+.achieve-card {
+    flex: 1;
+    background: rgba(255,255,255,0.05);
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.achieve-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+/* Lightbox effect */
+.light-box {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(15px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.light-box.active { display: flex; }
+.light-box img { max-width: 90%; max-height: 80%; border-radius: 10px; }
+
+.rights-reserved { text-align: center; padding: 40px 0; opacity: 0.5; font-size: 12px; }
+
+@media (max-width: 600px) { .achievement-flex { flex-direction: column; } }
+
+
+/* Hobbies Chips */
+.hobbies-container { margin: 20px 0; text-align: center; }
+.chip {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 5px;
+  background-color: black;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Modal Background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  cursor: zoom-out;
+}
+
+/* The Enlarged Image */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  margin-top: 10%;
+  border-radius: 10px;
+  animation: zoom 0.3s;
+}
+
+@keyframes zoom { from {transform:scale(0)} to {transform:scale(1)} }
+
+.close-btn {
+  position: absolute;
+  top: 20px; right: 35px;
+  color: white; font-size: 40px; cursor: pointer;
+}
+
+:root {
+    --bg-img: darkred;
+    --glass: rgba(20, 20, 20, 0.6);
+    --text: #ffffff;
+    --accent: #007AFF;
+}
+
+.light-mode {
+    --glass: rgba(255, 255, 255, 0.7);
+    --text: #1d1d1f;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+    font-family: 'Inter', sans-serif; 
+    background: var(--bg-img) no-repeat center center fixed; 
+    background-size: cover; 
+    color: var(--text); 
+    overflow-x: hidden; 
+}
+
+.desktop { padding: 60px 20px 120px; display: flex; flex-direction: column; align-items: center; gap: 30px; }
+
+/* macOS Window Style */
+.window { 
+    width: 100%; 
+    max-width: 850px; 
+    background: var(--glass); 
+    backdrop-filter: blur(25px); 
+    border-radius: 15px; 
+    border: 1px solid rgba(255,255,255,0.1); 
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3); 
+    overflow: hidden; 
+}
+.window-header { height: 35px; background: rgba(0,0,0,0.1); display: flex; align-items: center; padding: 0 15px; }
+.dots { display: flex; gap: 8px; }
+.dots span { width: 12px; height: 12px; border-radius: 50%; }
+.r { background: #ff5f56; } .y { background: #ffbd2e; } .g { background: #27c93f; }
+.window-content { padding: 25px; }
+
+/* Hero Section */
+.hero-flex { display: flex; align-items: center; gap: 25px; }
+.profile-img { width: 120px; height: 120px; border-radius: 20%; object-fit: cover; }
+.music-widget { display: flex; align-items: center; gap: 12px; background: rgba(0,0,0,0.2); padding: 10px; border-radius: 12px; margin-top: 15px; }
+
+/* Grid Info */
+.personal-info-grid { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+    margin-top: 20px; 
+    background: rgba(0, 0, 0, 0.15); 
+    padding: 15px; 
+    border-radius: 12px; 
+}
+.info-tag strong { font-size: 10px; color: var(--accent); text-transform: uppercase; }
+.full-width { grid-column: span 2; }
+
+/* Hobbies Chips */
+.hobbies-container h3 { margin-bottom: 15px; font-size: 16px; opacity: 0.8; }
+.chip { 
+    display: inline-block; 
+    padding: 8px 16px; 
+    margin: 5px; 
+    background: #000; 
+    border-radius: 20px; 
+    font-size: 13px; 
+    font-weight: 600; 
+}
+.chip i { margin-right: 8px; color: var(--accent); }
+
+/* Achievement Cards - Contain mode ensures full image visibility */
+.achievement-flex { display: flex; gap: 15px; flex-wrap: wrap; }
+.achieve-card { 
+    flex: 1; 
+    min-width: 200px;
+    background: rgba(255,255,255,0.05); 
+    padding: 15px; 
+    border-radius: 12px; 
+    text-align: center; 
+}
+.achieve-card img { 
+    width: 100%; 
+    height: 150px; 
+    object-fit: contain; 
+    background: rgba(0,0,0,0.2);
+    border-radius: 8px; 
+    cursor: zoom-in; 
+    transition: 0.3s;
+}
+
+/* BRAND COLORS FOR SOCIAL ICONS */
+.social-links { display: flex; gap: 30px; justify-content: center; font-size: 32px; padding: 20px; }
+.spotify-icon { color: #1DB954; }
+.shared-icon-gmail { color: #EA4335; }
+.phone-icon { color: #34b7f1; }
+.facebook-icon { color: #1877F2; }
+.instagram-icon { color: #E4405F; }
+.social-links a:hover { transform: scale(1.2); transition: 0.2s; }
+
+/* DOCK WITH TEXT */
+.dock { 
+    position: fixed; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background: rgba(255,255,255,0.2); 
+    backdrop-filter: blur(20px); 
+    padding: 10px 25px; 
+    border-radius: 25px; 
+    display: flex; 
+    gap: 30px; 
+    border: 1px solid rgba(255,255,255,0.2);
+    z-index: 1000;
+}
+.dock-item { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-decoration: none; 
+    color: white; 
+    transition: 0.3s;
+}
+.dock-item i { font-size: 20px; margin-bottom: 4px; }
+.dock-item span { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+.dock-item:hover { transform: translateY(-5px); color: var(--accent); }
+
+/* Lightbox */
+.light-box { 
+    position: fixed; 
+    top: 0; left: 0; 
+    width: 100%; height: 100%; 
+    background: rgba(0,0,0,0.9); 
+    display: none; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 9999; 
+}
+.light-box.active { display: flex; }
+.light-box img { max-width: 90%; max-height: 85%; border-radius: 10px; box-shadow: 0 0 30px rgba(0,0,0,0.5); }
+
+.menu-bar { position: fixed; top: 0; width: 100%; height: 28px; background: rgba(0,0,0,0.2); backdrop-filter: blur(20px); display: flex; justify-content: space-between; align-items: center; padding: 0 20px; font-size: 12px; z-index: 1000; }
+.rights-reserved { opacity: 0.5; font-size: 12px; text-align: center; padding: 20px; }
+
+@media (max-width: 600px) { .hero-flex, .achievement-flex { flex-direction: column; } }
