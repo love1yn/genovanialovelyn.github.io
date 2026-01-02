@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+
+    <div class="menu-bar">
+        <div class="left-menu">
+            <span class="apple-icon"></span>
+            <strong>MY PORTFOLIO</strong>
+        </div>
+        <div class="right-menu">
+            <button id="mode-toggle"> 🌓 </button>
+            <span id="current-time">12:00 PM</span>
+        </div>
+    </div>
+
+        <main class="desktop">
+        <section id="home" class="window">
+            <div class="window-header">
+                <div class="dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+                <span class="window-title"></span>
+            </div>
+            <div class="window-content">
+    <div class="hero-flex">
+        <img src="profile.png" alt="My Profile" class="profile-img">
+        <div class="hero-text">
+            <h1>LOVELYN GENOVANIA</h1>
+            <p>1st Year BSIT Student</p>
+            <p>Laguna State Polytechnic University</p>
+            
+            <div class="music-widget">
+                <div class="album-art">🎵</div>
+                <div class="music-info">
+                    <span class="artist-name">d4vd</span>
+                    <span class="song-name">Romantic Homicide (Favorite Song)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="personal-info-grid">
+        <div class="info-tag"><strong>Birthday:</strong> <span>October 08, 2007</span></div>
+        <div class="info-tag"><strong>Sex:</strong> <span>Female</span></div>
+        <div class="info-tag"><strong>Civil Status:</strong> <span>Single</span></div>
+        <div class="info-tag"><strong>Height:</strong> <span>149 cm</span></div>
+        <div class="info-tag"><strong>Religion:</strong> <span>Catholic</span></div>
+        <div class="info-tag"><strong>Language:</strong> <span>English, Tagalog</span></div>
+        <div class="info-tag full-width"><strong>Address:</strong> <span>Laguna, Philippines</span></div>
+    </div>
+
+    <hr class="divider">
+                <div class="about-me-text">
+                    <h3>ABOUT ME</h3>
+                    <p>Hi! My name is Lovelyn M.Genovania and I am a first-year BSIT student at Laguna State Polythecnic University. I chose this course because I have always been fascinated by computers and I want to understand how technology actually works behind the scenes.</p><br>
+                    
+                    <p>Right now, I’ve been busy practicing my problem-solving skills and learning the basic of Programming Language, and discovering how to solve problems using logic. It’s challenging, but I really enjoy the feeling of making a code work!</p><br>
+                    
+                    <p>Aside from my life as a student and studying, I’m also into listening music and watching movies. My goal is to work hard, learn as much as possible, and one day become a skilled IT Professional.</p>
+                </div>
+            </div>
+                
+        </section>
+        
+        <div class="social-links">
+  <a href="#"><i class="fab fa-spotify" style="color: #1DB954;"></i></a> <a href="mailto:yourname@gmail.com"><i class="fas fa-envelope" style="color: #EA4335;"></i></a> <a href="tel:+123456789"><i class="fas fa-phone"></i></a> <a href="#"><i class="fab fa-facebook" style="color: #1877F2;"></i></a> <a href="#"><i class="fab fa-instagram" style="color: #E4405F;"></i></a> </div>
+
+<div class="hobbies-container">
+  <h3>HOBBIES & LIKES</h3>
+  <div class="chips">
+    <span class="chip">🎧 Music</span>
+    <span class="chip">🍳 Cooking</span>
+    <span class="chip">🎞 Watching</span>
+    <span class="chip">☕ Matcha</span>
+    <span class="chip">🍓 Strawberry</span>
+  </div>
+</div>    
+        
+        <div class="window-row">
+            <section id="skills" class="window half">
+                <div class="window-header"><span class="window-title">SKILLS</span></div>
+                <div class="window-content">
+                    <div class="skill-item">
+                        <div class="skill-info"><span>HTML/CSS</span><span></span></div>
+                        <div class="progress-bar"><div class="fill" style="width: 80%"></div></div> 
+                        
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>C++</span><span></span></div>
+                        <div class="progress-bar"><div class="fill" style="width: 90%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info"><span>JAVA</span><span></span></div>
+                        <div class="progress-bar"><div class="fill" style="width: 65%"></div></div>
+                    </div>
+                </div>
+            </section>
+
+        <section class="window">
+            <div class="window-header"><span class="window-title">ACHIEVEMENTS</span></div>
+            <div class="window-content achievement-flex">
+                <div class="achieve-card">
+                    <img src="HONOR.jpg"
+                    <h4>WITH HONOR</h4>
+                </div>
+                <div class="achieve-card">
+                    <img src="NCII.png"
+                    <h4>NCII PASSER</h4>
+                </div>
+                <div class="achieve-card">
+                    <img src="PYTHON.png"
+                    <h4>PYTHON ESSENTIALS 1</h4>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="window">
+            <div class="window-header"><span class="window-title">PHOTOS</span></div>
+            <div class="window-content">
+                <div class="pinterest-grid">
+                    <div class="pin" onclick="openBox(this)"><img src="L.jpeg" alt="Cm"></div>
+                    <div class="pin" onclick="openBox(this)"><img src="O.jpeg" alt="friends"></div>
+                    <div class="pin" onclick="openBox(this)"><img src="V.jpg" alt="me"></div>
+                    <div class="pin" onclick="openBox(this)"><img src="E.jpg" alt="Me"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="window">
+            <div class="window-header"><span class="window-title">MESSAGE ME</span></div>
+            <div class="window-content">
+                <form class="macos-form">
+                    <div class="form-row"><label>To:</label><span class="recipient">0325-1218@lspu.edu.ph</span></div>
+                    <div class="form-row"><label>Name:</label><input type="text" placeholder="Your Name" required></div>
+                    <div class="form-row"><label>Email:</label><input type="email" placeholder="Your Email" required></div>
+                    <div class="form-area"><textarea placeholder="Write your message here..." rows="4"></textarea></div>
+                    <div class="form-footer"><button type="submit" class="send-btn">Send Message</button></div>
+                </form>
+            </div>
+        </section>
+
+        <section class="window">
+    <div class="window-header"><span class="window-title">CONTACT INFORMATION</span></div>
+    <div class="window-content contact-grid">
+        
+        <a href="mailto:0325-1218@lspu.edu.ph" class="contact-card">
+            <span class="card-icon">✉️</span>
+            <div class="card-info">
+                <label>Email</label>
+                <span>0325-1218@lspu.edu.ph</span>
+            </div>
+        </a>
+
+        <a href="tel:+639851750295" class="contact-card">
+            <span class="card-icon">📞</span>
+            <div class="card-info">
+                <label>Phone</label>
+                <span>+639851750295</span>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/share/1DHsTx5j2z/" target="_blank" class="contact-card">
+            <span class="card-icon">🔵<i class="fab fa-facebook" style="color: #1877F2;"></i></span>
+            <div class="card-info">
+                <label>Facebook</label>
+                <span>Lovelyn Genovania</span>
+            </div>
+        </a>
+
+        <a href="https://www.instagram.com/lablin_n?igsh=MTEybm4xZ2k2OGlhcQ==" target="_blank" class="contact-card">
+            <span class="card-icon">📸</span>
+            <div class="card-info">
+                <label>Instagram</label>
+                <span>lablin_n</span>
+            </div>
+        </a>
+        
+    </div>
+</section>
+
+        <footer class="rights-reserved">
+            <p>© 2026 Lovelyn Genovania. All Rights Reserved.</p>
+        </footer>
+    </main>
+
+    <div id="light-box" class="light-box" onclick="closeBox()">
+        <img id="box-img" src="" alt="Zoomed View">
+    </div>
+
+
+    <nav class="dock">
+        <a href="#home" class="dock-item">HOME</a>
+        <a href="#gallery" class="dock-item">ABOUT</a>
+        <a href="#contact" class="dock-item">CONTACT</a>
+    </nav>
+
+    <script>
+        const btn = document.getElementById('mode-toggle');
+        btn.onclick = () => document.body.classList.toggle('light-mode');
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('current-time').innerText = now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+        }
+        setInterval(updateClock, 1000); updateClock();
+    </script>
+</body>
+</html>
+</body>
+</html>
